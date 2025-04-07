@@ -42,66 +42,65 @@ const EntryForm = () => {
     };
 
     return (
-      <div className="max-w-md mx-auto mt-4 p-4 bg-white h-full flex flex-col justify-between">
-        <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">Add Details</h2>
-    
-        <form onSubmit={handleSubmit} className="flex flex-col flex-grow justify-between space-y-3">
-          <div>
-            <label htmlFor="name" className="text-gray-700 font-medium">Name</label>
-            <input
-              type="text"
-              id="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm"
-            />
-          </div>
-    
-          <div>
-            <label htmlFor="technology" className="text-gray-700 font-medium">Technology</label>
-            <input
-              type="text"
-              id="technology"
-              value={formData.technology}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm"
-            />
-          </div>
-    
-          <div>
-            <label htmlFor="company" className="text-gray-700 font-medium">Company</label>
-            <input
-              type="text"
-              id="company"
-              value={formData.company}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm"
-            />
-          </div>
-    
-          <div>
-            <label htmlFor="description" className="text-gray-700 font-medium">Description</label>
-            <textarea
-              id="description"
-              rows="2"
-              value={formData.description}
-              onChange={handleChange}
-              required
-              className="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent text-sm"
-            ></textarea>
-          </div>
-    
-          <button
-            type="submit"
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-md transition duration-300 text-sm mt-4"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+      <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md mt-8">
+            <h2 className="text-center text-2xl font-semibold text-gray-700 mb-4">Add Entry Details</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="technology" className="block text-sm font-medium text-gray-700">Technology</label>
+                    <input
+                        type="text"
+                        id="technology"
+                        value={formData.technology}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="company" className="block text-sm font-medium text-gray-700">Company</label>
+                    <input
+                        type="text"
+                        id="company"
+                        value={formData.company}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required
+                    />
+                </div>
+
+                <div>
+                    <label htmlFor="description" className="block text-sm font-medium text-gray-700">Description</label>
+                    <textarea
+                        id="description"
+                        rows="3"
+                        value={formData.description}
+                        onChange={handleChange}
+                        className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                        required
+                    ></textarea>
+                </div>
+
+                <button
+                    type="submit"
+                    className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-4 rounded-md transition duration-300"
+                >
+                    Submit
+                </button>
+            </form>
+        </div>
     );
     
 };
